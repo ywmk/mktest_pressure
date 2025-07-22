@@ -1,0 +1,573 @@
+2025-07-23 00:30:29,544 - evalscope - INFO - Starting benchmark with args: 
+2025-07-23 00:30:29,545 - evalscope - INFO - {
+    "model": "Qwen2.5-0.5B-Instruct",
+    "model_id": "Qwen2.5-0.5B-Instruct",
+    "attn_implementation": null,
+    "api": "openai",
+    "tokenizer_path": "./models/Qwen/Qwen2.5-0.5B-Instruct",
+    "port": 8877,
+    "url": "http://127.0.0.1:8110/v1/chat/completions",
+    "headers": {},
+    "connect_timeout": 600,
+    "read_timeout": 600,
+    "api_key": null,
+    "no_test_connection": false,
+    "number": 10,
+    "parallel": 1,
+    "rate": -1,
+    "sleep_interval": 5,
+    "log_every_n_query": 10,
+    "debug": false,
+    "wandb_api_key": null,
+    "swanlab_api_key": null,
+    "name": null,
+    "outputs_dir": "outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_1_number_10",
+    "max_prompt_length": 512,
+    "min_prompt_length": 512,
+    "prefix_length": 0,
+    "prompt": null,
+    "query_template": null,
+    "apply_chat_template": true,
+    "image_width": 224,
+    "image_height": 224,
+    "image_format": "RGB",
+    "image_num": 1,
+    "dataset": "random",
+    "dataset_path": null,
+    "frequency_penalty": null,
+    "repetition_penalty": null,
+    "logprobs": null,
+    "max_tokens": 512,
+    "min_tokens": 512,
+    "n_choices": null,
+    "seed": 0,
+    "stop": null,
+    "stop_token_ids": null,
+    "stream": true,
+    "temperature": 0.0,
+    "top_p": null,
+    "top_k": null,
+    "extra_args": {
+        "ignore_eos": true
+    }
+}
+2025-07-23 00:30:34,168 - evalscope - INFO - Test connection successful.
+2025-07-23 00:30:34,731 - evalscope - INFO - Save the data base to: outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_1_number_10/benchmark_data.db
+2025-07-23 00:31:16,900 - evalscope - INFO - {
+  "Time taken for tests (s)": 42.1655,
+  "Number of concurrency": 1,
+  "Total requests": 10,
+  "Succeed requests": 10,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 121.4264,
+  "Total token throughput (tok/s)": 242.829,
+  "Request throughput (req/s)": 0.2372,
+  "Average latency (s)": 4.2148,
+  "Average time to first token (s)": 0.0224,
+  "Average time per output token (s)": 0.0082,
+  "Average inter-token latency (s)": 0.0082,
+  "Average input tokens per request": 511.9,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:31:16,966 - evalscope - INFO - 
+Benchmarking summary:
++-----------------------------------+----------+
+| Key                               |    Value |
++===================================+==========+
+| Time taken for tests (s)          |  42.1655 |
++-----------------------------------+----------+
+| Number of concurrency             |   1      |
++-----------------------------------+----------+
+| Total requests                    |  10      |
++-----------------------------------+----------+
+| Succeed requests                  |  10      |
++-----------------------------------+----------+
+| Failed requests                   |   0      |
++-----------------------------------+----------+
+| Output token throughput (tok/s)   | 121.426  |
++-----------------------------------+----------+
+| Total token throughput (tok/s)    | 242.829  |
++-----------------------------------+----------+
+| Request throughput (req/s)        |   0.2372 |
++-----------------------------------+----------+
+| Average latency (s)               |   4.2148 |
++-----------------------------------+----------+
+| Average time to first token (s)   |   0.0224 |
++-----------------------------------+----------+
+| Average time per output token (s) |   0.0082 |
++-----------------------------------+----------+
+| Average inter-token latency (s)   |   0.0082 |
++-----------------------------------+----------+
+| Average input tokens per request  | 511.9    |
++-----------------------------------+----------+
+| Average output tokens per request | 512      |
++-----------------------------------+----------+
+2025-07-23 00:31:16,976 - evalscope - INFO - 
+Percentile results:
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+| Percentiles | TTFT (s) | ITL (s) | TPOT (s) | Latency (s) | Input tokens | Output tokens | Output (tok/s) | Total (tok/s) |
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+|     10%     |  0.019   | 0.0076  |  0.008   |   4.1317    |     512      |      512      |    116.913     |   233.8259    |
+|     25%     |  0.0201  | 0.0078  |  0.0081  |   4.1448    |     512      |      512      |    120.5258    |   241.0515    |
+|     50%     |  0.0212  | 0.0081  |  0.0082  |   4.2023    |     512      |      512      |    122.6954    |   245.3908    |
+|     66%     |  0.0214  | 0.0082  |  0.0083  |   4.2439    |     512      |      512      |    123.2925    |   246.5849    |
+|     75%     |  0.0226  | 0.0084  |  0.0083  |   4.2481    |     512      |      512      |    123.5287    |   247.0574    |
+|     80%     |  0.0292  | 0.0085  |  0.0085  |   4.3793    |     512      |      512      |    123.9189    |   247.8378    |
+|     90%     |  0.0302  | 0.0088  |  0.0086  |   4.3911    |     512      |      512      |    125.4601    |   250.9201    |
+|     95%     |  0.0302  | 0.0094  |  0.0086  |   4.3911    |     512      |      512      |    125.4601    |   250.9201    |
+|     98%     |  0.0302  | 0.0103  |  0.0086  |   4.3911    |     512      |      512      |    125.4601    |   250.9201    |
+|     99%     |  0.0302  | 0.0111  |  0.0086  |   4.3911    |     512      |      512      |    125.4601    |   250.9201    |
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+2025-07-23 00:31:16,976 - evalscope - INFO - Save the summary to: outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_1_number_10
+2025-07-23 00:31:17,042 - evalscope - INFO - Sleeping for 5 seconds before the next run...
+2025-07-23 00:31:22,042 - evalscope - INFO - Starting benchmark with args: 
+2025-07-23 00:31:22,043 - evalscope - INFO - {
+    "model": "Qwen2.5-0.5B-Instruct",
+    "model_id": "Qwen2.5-0.5B-Instruct",
+    "attn_implementation": null,
+    "api": "openai",
+    "tokenizer_path": "./models/Qwen/Qwen2.5-0.5B-Instruct",
+    "port": 8877,
+    "url": "http://127.0.0.1:8110/v1/chat/completions",
+    "headers": {},
+    "connect_timeout": 600,
+    "read_timeout": 600,
+    "api_key": null,
+    "no_test_connection": false,
+    "number": 50,
+    "parallel": 10,
+    "rate": -1,
+    "sleep_interval": 5,
+    "log_every_n_query": 10,
+    "debug": false,
+    "wandb_api_key": null,
+    "swanlab_api_key": null,
+    "name": null,
+    "outputs_dir": "outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_10_number_50",
+    "max_prompt_length": 512,
+    "min_prompt_length": 512,
+    "prefix_length": 0,
+    "prompt": null,
+    "query_template": null,
+    "apply_chat_template": true,
+    "image_width": 224,
+    "image_height": 224,
+    "image_format": "RGB",
+    "image_num": 1,
+    "dataset": "random",
+    "dataset_path": null,
+    "frequency_penalty": null,
+    "repetition_penalty": null,
+    "logprobs": null,
+    "max_tokens": 512,
+    "min_tokens": 512,
+    "n_choices": null,
+    "seed": 0,
+    "stop": null,
+    "stop_token_ids": null,
+    "stream": true,
+    "temperature": 0.0,
+    "top_p": null,
+    "top_k": null,
+    "extra_args": {
+        "ignore_eos": true
+    }
+}
+2025-07-23 00:31:22,575 - evalscope - INFO - Test connection successful.
+2025-07-23 00:31:23,242 - evalscope - INFO - Save the data base to: outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_10_number_50/benchmark_data.db
+2025-07-23 00:31:28,412 - evalscope - INFO - {
+  "Time taken for tests (s)": 5.168,
+  "Number of concurrency": 10,
+  "Total requests": 10,
+  "Succeed requests": 10,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 990.709,
+  "Total token throughput (tok/s)": 1981.2245,
+  "Request throughput (req/s)": 1.935,
+  "Average latency (s)": 5.153,
+  "Average time to first token (s)": 0.0957,
+  "Average time per output token (s)": 0.0099,
+  "Average inter-token latency (s)": 0.0099,
+  "Average input tokens per request": 511.9,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:31:33,564 - evalscope - INFO - {
+  "Time taken for tests (s)": 10.3196,
+  "Number of concurrency": 10,
+  "Total requests": 20,
+  "Succeed requests": 20,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 992.2905,
+  "Total token throughput (tok/s)": 1984.4841,
+  "Request throughput (req/s)": 1.9381,
+  "Average latency (s)": 5.1478,
+  "Average time to first token (s)": 0.0666,
+  "Average time per output token (s)": 0.0099,
+  "Average inter-token latency (s)": 0.0099,
+  "Average input tokens per request": 511.95,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:31:38,554 - evalscope - INFO - {
+  "Time taken for tests (s)": 15.3104,
+  "Number of concurrency": 10,
+  "Total requests": 30,
+  "Succeed requests": 30,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 1003.2385,
+  "Total token throughput (tok/s)": 2006.4117,
+  "Request throughput (req/s)": 1.9595,
+  "Average latency (s)": 5.0933,
+  "Average time to first token (s)": 0.055,
+  "Average time per output token (s)": 0.0099,
+  "Average inter-token latency (s)": 0.0098,
+  "Average input tokens per request": 511.9667,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:31:43,635 - evalscope - INFO - {
+  "Time taken for tests (s)": 20.3913,
+  "Number of concurrency": 10,
+  "Total requests": 40,
+  "Succeed requests": 40,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 1004.35,
+  "Total token throughput (tok/s)": 2008.651,
+  "Request throughput (req/s)": 1.9616,
+  "Average latency (s)": 5.0879,
+  "Average time to first token (s)": 0.0489,
+  "Average time per output token (s)": 0.0099,
+  "Average inter-token latency (s)": 0.0098,
+  "Average input tokens per request": 511.975,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:31:48,551 - evalscope - INFO - {
+  "Time taken for tests (s)": 25.3064,
+  "Number of concurrency": 10,
+  "Total requests": 50,
+  "Succeed requests": 50,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 1011.6016,
+  "Total token throughput (tok/s)": 2023.1636,
+  "Request throughput (req/s)": 1.9758,
+  "Average latency (s)": 5.0538,
+  "Average time to first token (s)": 0.0448,
+  "Average time per output token (s)": 0.0098,
+  "Average inter-token latency (s)": 0.0098,
+  "Average input tokens per request": 511.98,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:31:48,781 - evalscope - INFO - 
+Benchmarking summary:
++-----------------------------------+-----------+
+| Key                               |     Value |
++===================================+===========+
+| Time taken for tests (s)          |   25.3064 |
++-----------------------------------+-----------+
+| Number of concurrency             |   10      |
++-----------------------------------+-----------+
+| Total requests                    |   50      |
++-----------------------------------+-----------+
+| Succeed requests                  |   50      |
++-----------------------------------+-----------+
+| Failed requests                   |    0      |
++-----------------------------------+-----------+
+| Output token throughput (tok/s)   | 1011.6    |
++-----------------------------------+-----------+
+| Total token throughput (tok/s)    | 2023.16   |
++-----------------------------------+-----------+
+| Request throughput (req/s)        |    1.9758 |
++-----------------------------------+-----------+
+| Average latency (s)               |    5.0538 |
++-----------------------------------+-----------+
+| Average time to first token (s)   |    0.0448 |
++-----------------------------------+-----------+
+| Average time per output token (s) |    0.0098 |
++-----------------------------------+-----------+
+| Average inter-token latency (s)   |    0.0098 |
++-----------------------------------+-----------+
+| Average input tokens per request  |  511.98   |
++-----------------------------------+-----------+
+| Average output tokens per request |  512      |
++-----------------------------------+-----------+
+2025-07-23 00:31:48,816 - evalscope - INFO - 
+Percentile results:
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+| Percentiles | TTFT (s) | ITL (s) | TPOT (s) | Latency (s) | Input tokens | Output tokens | Output (tok/s) | Total (tok/s) |
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+|     10%     |  0.0266  | 0.0089  |  0.0096  |   4.9179    |     512      |      512      |    99.3027     |   198.5921    |
+|     25%     |  0.0283  | 0.0093  |  0.0097  |   4.9803    |     512      |      512      |    99.5046     |   199.0092    |
+|     50%     |  0.0319  | 0.0097  |  0.0099  |   5.0687    |     512      |      512      |    101.0243    |   202.0485    |
+|     66%     |  0.0373  |  0.01   |   0.01   |   5.1363    |     512      |      512      |    102.6292    |   205.2584    |
+|     75%     |  0.045   | 0.0102  |   0.01   |   5.1455    |     512      |      512      |    102.8049    |   205.6097    |
+|     80%     |  0.0487  | 0.0103  |   0.01   |   5.1517    |     512      |      512      |    104.0037    |   208.0075    |
+|     90%     |  0.0712  | 0.0108  |   0.01   |   5.1563    |     512      |      512      |    104.1589    |   208.3177    |
+|     95%     |  0.0721  | 0.0112  |   0.01   |    5.157    |     512      |      512      |    104.1766    |   208.3533    |
+|     98%     |  0.3767  | 0.0118  |   0.01   |   5.1626    |     512      |      512      |    104.2208    |   208.4416    |
+|     99%     |  0.3767  | 0.0125  |   0.01   |   5.1626    |     512      |      512      |    104.2208    |   208.4416    |
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+2025-07-23 00:31:48,816 - evalscope - INFO - Save the summary to: outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_10_number_50
+2025-07-23 00:31:48,878 - evalscope - INFO - Sleeping for 5 seconds before the next run...
+2025-07-23 00:31:53,878 - evalscope - INFO - Starting benchmark with args: 
+2025-07-23 00:31:53,879 - evalscope - INFO - {
+    "model": "Qwen2.5-0.5B-Instruct",
+    "model_id": "Qwen2.5-0.5B-Instruct",
+    "attn_implementation": null,
+    "api": "openai",
+    "tokenizer_path": "./models/Qwen/Qwen2.5-0.5B-Instruct",
+    "port": 8877,
+    "url": "http://127.0.0.1:8110/v1/chat/completions",
+    "headers": {},
+    "connect_timeout": 600,
+    "read_timeout": 600,
+    "api_key": null,
+    "no_test_connection": false,
+    "number": 100,
+    "parallel": 50,
+    "rate": -1,
+    "sleep_interval": 5,
+    "log_every_n_query": 10,
+    "debug": false,
+    "wandb_api_key": null,
+    "swanlab_api_key": null,
+    "name": null,
+    "outputs_dir": "outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_50_number_100",
+    "max_prompt_length": 512,
+    "min_prompt_length": 512,
+    "prefix_length": 0,
+    "prompt": null,
+    "query_template": null,
+    "apply_chat_template": true,
+    "image_width": 224,
+    "image_height": 224,
+    "image_format": "RGB",
+    "image_num": 1,
+    "dataset": "random",
+    "dataset_path": null,
+    "frequency_penalty": null,
+    "repetition_penalty": null,
+    "logprobs": null,
+    "max_tokens": 512,
+    "min_tokens": 512,
+    "n_choices": null,
+    "seed": 0,
+    "stop": null,
+    "stop_token_ids": null,
+    "stream": true,
+    "temperature": 0.0,
+    "top_p": null,
+    "top_k": null,
+    "extra_args": {
+        "ignore_eos": true
+    }
+}
+2025-07-23 00:31:54,430 - evalscope - INFO - Test connection successful.
+2025-07-23 00:31:55,336 - evalscope - INFO - Save the data base to: outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_50_number_100/benchmark_data.db
+2025-07-23 00:32:02,431 - evalscope - INFO - {
+  "Time taken for tests (s)": 7.0944,
+  "Number of concurrency": 50,
+  "Total requests": 10,
+  "Succeed requests": 10,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 721.6929,
+  "Total token throughput (tok/s)": 1443.3858,
+  "Request throughput (req/s)": 1.4096,
+  "Average latency (s)": 7.0665,
+  "Average time to first token (s)": 0.1375,
+  "Average time per output token (s)": 0.0136,
+  "Average inter-token latency (s)": 0.0135,
+  "Average input tokens per request": 512.0,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:02,495 - evalscope - INFO - {
+  "Time taken for tests (s)": 7.1585,
+  "Number of concurrency": 50,
+  "Total requests": 20,
+  "Succeed requests": 20,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 1430.4635,
+  "Total token throughput (tok/s)": 2860.7873,
+  "Request throughput (req/s)": 2.7939,
+  "Average latency (s)": 7.089,
+  "Average time to first token (s)": 0.1575,
+  "Average time per output token (s)": 0.0136,
+  "Average inter-token latency (s)": 0.0135,
+  "Average input tokens per request": 511.95,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:02,552 - evalscope - INFO - {
+  "Time taken for tests (s)": 7.2151,
+  "Number of concurrency": 50,
+  "Total requests": 30,
+  "Succeed requests": 30,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 2128.88,
+  "Total token throughput (tok/s)": 4256.7898,
+  "Request throughput (req/s)": 4.158,
+  "Average latency (s)": 7.1147,
+  "Average time to first token (s)": 0.1793,
+  "Average time per output token (s)": 0.0136,
+  "Average inter-token latency (s)": 0.0135,
+  "Average input tokens per request": 511.7667,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:02,611 - evalscope - INFO - {
+  "Time taken for tests (s)": 7.2737,
+  "Number of concurrency": 50,
+  "Total requests": 40,
+  "Succeed requests": 40,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 2815.6347,
+  "Total token throughput (tok/s)": 5630.307,
+  "Request throughput (req/s)": 5.4993,
+  "Average latency (s)": 7.1381,
+  "Average time to first token (s)": 0.201,
+  "Average time per output token (s)": 0.0136,
+  "Average inter-token latency (s)": 0.0135,
+  "Average input tokens per request": 511.825,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:02,621 - evalscope - INFO - {
+  "Time taken for tests (s)": 7.2842,
+  "Number of concurrency": 50,
+  "Total requests": 50,
+  "Succeed requests": 50,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 3514.4631,
+  "Total token throughput (tok/s)": 7027.9652,
+  "Request throughput (req/s)": 6.8642,
+  "Average latency (s)": 7.1556,
+  "Average time to first token (s)": 0.2196,
+  "Average time per output token (s)": 0.0136,
+  "Average inter-token latency (s)": 0.0135,
+  "Average input tokens per request": 511.86,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:09,714 - evalscope - INFO - {
+  "Time taken for tests (s)": 14.377,
+  "Number of concurrency": 50,
+  "Total requests": 60,
+  "Succeed requests": 60,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 2136.7416,
+  "Total token throughput (tok/s)": 4272.4398,
+  "Request throughput (req/s)": 4.1733,
+  "Average latency (s)": 7.1757,
+  "Average time to first token (s)": 0.1963,
+  "Average time per output token (s)": 0.0137,
+  "Average inter-token latency (s)": 0.0136,
+  "Average input tokens per request": 511.75,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:09,728 - evalscope - INFO - {
+  "Time taken for tests (s)": 14.3906,
+  "Number of concurrency": 50,
+  "Total requests": 70,
+  "Succeed requests": 70,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 2490.507,
+  "Total token throughput (tok/s)": 4979.9717,
+  "Request throughput (req/s)": 4.8643,
+  "Average latency (s)": 7.186,
+  "Average time to first token (s)": 0.1798,
+  "Average time per output token (s)": 0.0137,
+  "Average inter-token latency (s)": 0.0137,
+  "Average input tokens per request": 511.7857,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:09,759 - evalscope - INFO - {
+  "Time taken for tests (s)": 14.4214,
+  "Number of concurrency": 50,
+  "Total requests": 80,
+  "Succeed requests": 80,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 2840.2193,
+  "Total token throughput (tok/s)": 5678.0809,
+  "Request throughput (req/s)": 5.5473,
+  "Average latency (s)": 7.1893,
+  "Average time to first token (s)": 0.1667,
+  "Average time per output token (s)": 0.0137,
+  "Average inter-token latency (s)": 0.0137,
+  "Average input tokens per request": 511.575,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:09,784 - evalscope - INFO - {
+  "Time taken for tests (s)": 14.4466,
+  "Number of concurrency": 50,
+  "Total requests": 90,
+  "Succeed requests": 90,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 3189.686,
+  "Total token throughput (tok/s)": 6376.6725,
+  "Request throughput (req/s)": 6.2299,
+  "Average latency (s)": 7.1899,
+  "Average time to first token (s)": 0.1586,
+  "Average time per output token (s)": 0.0138,
+  "Average inter-token latency (s)": 0.0137,
+  "Average input tokens per request": 511.5667,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:09,795 - evalscope - INFO - {
+  "Time taken for tests (s)": 14.4579,
+  "Number of concurrency": 50,
+  "Total requests": 100,
+  "Succeed requests": 100,
+  "Failed requests": 0,
+  "Output token throughput (tok/s)": 3541.3192,
+  "Total token throughput (tok/s)": 7079.941,
+  "Request throughput (req/s)": 6.9166,
+  "Average latency (s)": 7.1892,
+  "Average time to first token (s)": 0.1543,
+  "Average time per output token (s)": 0.0138,
+  "Average inter-token latency (s)": 0.0137,
+  "Average input tokens per request": 511.61,
+  "Average output tokens per request": 512.0
+}
+2025-07-23 00:32:10,260 - evalscope - INFO - 
+Benchmarking summary:
++-----------------------------------+-----------+
+| Key                               |     Value |
++===================================+===========+
+| Time taken for tests (s)          |   14.4579 |
++-----------------------------------+-----------+
+| Number of concurrency             |   50      |
++-----------------------------------+-----------+
+| Total requests                    |  100      |
++-----------------------------------+-----------+
+| Succeed requests                  |  100      |
++-----------------------------------+-----------+
+| Failed requests                   |    0      |
++-----------------------------------+-----------+
+| Output token throughput (tok/s)   | 3541.32   |
++-----------------------------------+-----------+
+| Total token throughput (tok/s)    | 7079.94   |
++-----------------------------------+-----------+
+| Request throughput (req/s)        |    6.9166 |
++-----------------------------------+-----------+
+| Average latency (s)               |    7.1892 |
++-----------------------------------+-----------+
+| Average time to first token (s)   |    0.1543 |
++-----------------------------------+-----------+
+| Average time per output token (s) |    0.0138 |
++-----------------------------------+-----------+
+| Average inter-token latency (s)   |    0.0137 |
++-----------------------------------+-----------+
+| Average input tokens per request  |  511.61   |
++-----------------------------------+-----------+
+| Average output tokens per request |  512      |
++-----------------------------------+-----------+
+2025-07-23 00:32:10,323 - evalscope - INFO - 
+Percentile results:
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+| Percentiles | TTFT (s) | ITL (s) | TPOT (s) | Latency (s) | Input tokens | Output tokens | Output (tok/s) | Total (tok/s) |
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+|     10%     |  0.0759  | 0.0096  |  0.0136  |   7.0862    |     512      |      512      |    70.4738     |   140.9275    |
+|     25%     |  0.0846  | 0.0124  |  0.0136  |   7.1697    |     512      |      512      |    70.8365     |   141.6528    |
+|     50%     |  0.1291  | 0.0133  |  0.0138  |   7.1994    |     512      |      512      |     71.119     |   142.2334    |
+|     66%     |  0.1805  | 0.0139  |  0.0139  |    7.22     |     512      |      512      |    71.2963     |   142.5808    |
+|     75%     |  0.2245  | 0.0143  |  0.014   |   7.2288    |     512      |      512      |    71.4288     |   142.8229    |
+|     80%     |  0.2542  | 0.0146  |  0.014   |   7.2355    |     512      |      512      |    71.6833     |   143.3667    |
+|     90%     |  0.2853  | 0.0157  |  0.0141  |   7.2661    |     512      |      512      |    72.2732     |   144.5463    |
+|     95%     |  0.2962  | 0.0178  |  0.0141  |   7.2811    |     512      |      512      |    72.4888     |   144.9776    |
+|     98%     |  0.2983  | 0.0225  |  0.0141  |   7.2859    |     512      |      512      |    72.5516     |   145.1033    |
+|     99%     |  0.2995  | 0.0328  |  0.0141  |   7.2867    |     512      |      512      |    72.6779     |   145.3557    |
++-------------+----------+---------+----------+-------------+--------------+---------------+----------------+---------------+
+2025-07-23 00:32:10,323 - evalscope - INFO - Save the summary to: outputs/20250723_003029/Qwen2.5-0.5B-Instruct/parallel_50_number_100

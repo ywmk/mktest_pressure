@@ -1,0 +1,14 @@
+evalscope perf \
+  --parallel 1 10 50 \
+  --number 10 50 100 \
+  --model Qwen2.5-0.5B-Instruct \
+  --url http://127.0.0.1:8110/v1/chat/completions \
+  --api openai \
+  --dataset random \
+  --max-tokens 512 \
+  --min-tokens 512 \
+  --prefix-length 0 \
+  --min-prompt-length 512 \
+  --max-prompt-length 512 \
+  --tokenizer-path ./models/Qwen/Qwen2.5-0.5B-Instruct \
+  --extra-args '{"ignore_eos": true}'
