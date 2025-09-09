@@ -1,0 +1,1 @@
+bash -x prepare_env.sh
